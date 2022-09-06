@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>The onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an
+        HTML element:</p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Mouse Over Me</div>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+        Click Me</div>
+    <div onmousedown="" onmouseup=""></div>
+
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "open it"
+        }
+        function mDown(obj1) {
+            obj1.style.backgroundColor = "#1ec5e5";
+            obj1.innerHTML = "Release Me";
+        }
+
+        function mUp(obj1) {
+            obj1.style.backgroundColor = "#D94A38";
+            obj1.innerHTML = "Thank You";
+        }
+    </script>
+</body>
+
+</html>

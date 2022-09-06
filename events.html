@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="checkCookies()">
+    <h2>Javascript HTML event</h2>
+    <h2 onclick="this.innerHTML='oops!'">clickhere</h2>
+
+
+
+    <button id="myBtn">Try it</button>
+    <p id="hey">touch</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        document.getElementById('myBtn').onclick = displayDate;
+        function displayDate() {
+            document.getElementById('demo').innerHTML = Date()
+        }
+
+        function checkCookies() {
+            var text = "";        //variable using to create a variable.....
+            if (navigator.cookieEnabled == true) {
+                text = "Cookies are enabled.";
+            } else {
+                text = "Cookies are not enabled.";
+            }
+            document.getElementById("demo1").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

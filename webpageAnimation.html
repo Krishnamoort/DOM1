@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 1090px;
+        height: 1090px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: red;
+
+    }
+
+    #animate2 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: red;
+        align-content: right;
+    }
+</style>
+
+<body>
+
+    <h2>My First JavaScript Animation</h2>
+    <p><button onclick="myMove()">animation</button></p>
+    <div id="container">
+        <div id="animate">
+            <p><i>krishna</i></p>
+        </div>
+        <div id="animate2">
+            <p><i>krishna</i></p>
+        </div>
+    </div>
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            const elem2 = document.getElementById("animate2");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 3);
+
+            function frame() {
+                if (pos == 1000) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+            function frame() {
+                if (pos == 1000) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem2.style.left = pos + "px";
+                    elem2.style.top = pos + "px";
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
